@@ -9,6 +9,10 @@ this_month = time.strftime("%Y-%m")
 
 if __name__ == "__main__":
 
+    if not os.path.exists(os.getenv("FALCON_DETAILS_PATH")):
+        os.makedirs(os.getenv("FALCON_DETAILS_PATH"))
+    if not os.path.exists("data"):
+        os.makedirs("data")
     # get panvel servers alerts
     falcon_ = falcon.API(
         base_url=os.getenv("BASE_URL"),
