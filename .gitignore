@@ -1,0 +1,7 @@
+.env
+.pycache
+.venv
+data/*
+modules/__pycache__
+export/*
+__pycache__
